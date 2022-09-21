@@ -1,0 +1,22 @@
+Program description:
+
+Create a Python program to calculate an apartment complex rental agent's commission. The program accepts the ID number and name of the agent who rented the apartment, and the number of bedrooms in the apartment. The commission is $100 for renting a three-bedroom apartment, $75 for renting a two-bedroom apartment, $55 for renting a one-bedroom apartment, and $30 for renting a studio (zero-bedroom) apartment. Output is the salesperson’s name and ID number and the commission earned on the rental.
+
+Please take note of the divider in the program output - it's a string of 20 underscores. You will need to put this in your program output. You can copy and paste it from the program description.
+
+Conventions:
+
+Include your name and the date in the program header.
+Save the file as [lastname]_[firstname]_M04_debug.py
+My submission would be Jovanovich_Mike_M04_debug.py
+
+Example program run:
+
+Enter the salesperson ID: 223
+Enter the salesperson name: Larry Jensenroylen
+Enter the number of bedrooms: 0
+____________________
+Salesperson = Larry Jensenroylen
+ID = 223
+Commission = $30.00
+____________________
