@@ -6,8 +6,6 @@
 ##
 ###############################################################
 
-NUMERICAL_INPUT_BOUNDARY = 999999999
-
 def SomeFunction( first, second ):
     result = first
     if first > second:
@@ -16,35 +14,27 @@ def SomeFunction( first, second ):
         result = second
     return result
 
-## Does this do the same thing as above?
 def SomeFunction_v2( first, second ):
-    result = first
-    if first < second:
-        result = second
-    return result
-
-## Does this do the same thing as above?
-def SomeFunction_v3( first, second ):
     if first > second:
         return first
     else:
         return second
 
+def SomeFunction_v3( first, second ):
+    result = first
+    if first < second:
+        result = second
+    return result
+
 x = 0
 y = 0
-
-## Why init these to these particular values?
-result = -1 * NUMERICAL_INPUT_BOUNDARY
+result = None
 
 x = int( input( "Enter a number: " ) );
 y = int( input( "Enter a number: " ) );
 
-result = SomeFunction( result, x )
-result = SomeFunction( result, y )
+## result = SomeFunction( x, y )
+## result = SomeFunction_v2( x, y )
+## result = SomeFunction_v3( x, y )
 
-print( "Max: " + str( result ) )
-
-## result = SomeFunction_v2( result, x )
-## result = SomeFunction_v3( result, x )
-
-
+print( "Result: " + str( result ) )
