@@ -1,0 +1,25 @@
+
+MISSING ITEMS:
+
+DOCTYPE missing.
+HTML "lang" attribute missing.
+HTML element(s) missing: ...
+
+
+MALFORMED ITEMS:
+HTML tag(s) not closed: ...
+
+
+NOT FUNCTIONAL ITEMS:
+Link(s) broken / not functional: ...
+
+
+UNREQUESTED ITEMS:
+Elements included that do not fall within assignment scope: ...
+
+
+RUBRIC TODO:
+
+Passes HTML validation via https://validator.w3.org/ with zero errors (warnings do not affect grade).
+Passes CSS validation via https://validator.w3.org/ with zero errors (warnings do not affect grade).
+Requested content provided...
