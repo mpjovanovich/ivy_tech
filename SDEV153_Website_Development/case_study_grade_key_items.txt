@@ -1,6 +1,10 @@
-
+URL not submitted - ch5
 Yurts page missing
 Not all HTML elements from wireframe included
+missing span on activities page
 mailto link in footer missing
-
-
+mailto link in footer configured incorrectly
+"wrapper" div missing 
+body styles incorrect
+h1 styles incorrect
+Styles are missing to pad content within the main element
