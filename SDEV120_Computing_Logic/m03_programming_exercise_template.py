@@ -61,7 +61,7 @@ def main():
     decimal_number = str( decimal_number )
 
     ## Print the output of the program.
-    print( '----------------------------------------' )
+    print( '--------------------' )
     print( 'You entered the binary number ' + binary_number )
     print( 'The decimal equivalent is ' + decimal_number )
 
