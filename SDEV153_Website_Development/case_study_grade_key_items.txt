@@ -8,3 +8,5 @@ mailto link in footer configured incorrectly
 body styles incorrect
 h1 styles incorrect
 Styles are missing to pad content within the main element
+
+1) The site uses hierarchical organization - it's just very shallow. You can think of random as "unstructured" or "no organization".
