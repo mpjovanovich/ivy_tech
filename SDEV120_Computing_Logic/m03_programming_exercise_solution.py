@@ -6,7 +6,6 @@
 ## Each of the component binary digits are displayed in decimal representation,
 ## then the result (sum) is displayed as output.
 
-
 ## This function accepts a bit value (1 or zero) as a string and its position within the binary number.
 ## It returns the decimal equivalent as an integer.
 def ConvertBinaryToDecimal( bit_value, position ):
@@ -23,7 +22,6 @@ def ConvertBinaryToDecimal( bit_value, position ):
     ## Return the integer that we just calculated to the calling function (main)
     return result
 
-
 def main():
     ## Prompt the user for input.
     ## We will refer to the four bits by their position - [three][two][one][zero]
@@ -34,24 +32,27 @@ def main():
     position_three_bit = input( 'Enter the position three bit: ' )
     position_three_decimal = ConvertBinaryToDecimal( position_three_bit, 3 )
     print( 'The decimal equivalent is: ' + str( position_three_decimal ) )
-    
+
     ## Get the bit (zero or one) at position two and calculate its decimal representation.
     ## Then call our function to do the conversion and store the result in a variable.
     position_two_bit =   input( 'Enter the position two bit: ' )
-    ## TODO: Get and print this decimal value.
+    position_two_decimal = ConvertBinaryToDecimal( position_two_bit, 2 )
+    print( 'The decimal equivalent is: ' + str( position_two_decimal ) )
     
     ## Get the bit (zero or one) at position one and calculate its decimal representation.
     ## Then call our function to do the conversion and store the result in a variable.
     position_one_bit =   input( 'Enter the position one bit: ' )
-    ## TODO: Get and print this decimal value.
+    position_one_decimal = ConvertBinaryToDecimal( position_one_bit, 1 )
+    print( 'The decimal equivalent is: ' + str( position_one_decimal ) )
     
     ## Get the bit (zero or one) at position zero and calculate its decimal representation.
     ## Then call our function to do the conversion and store the result in a variable.
     position_zero_bit =  input( 'Enter the position zero bit: ' )
-    ## TODO: Get and print this decimal value.
+    position_zero_decimal = ConvertBinaryToDecimal( position_zero_bit, 0 )
+    print( 'The decimal equivalent is: ' + str( position_zero_decimal ) )
 
-    decimal_number = None
-    ## TODO: Sum the decimal values above to get the total decimal result. Store in the variable decimal_number.
+    ## Sum the decimal values above to get the total decimal result. Store in the variable decimal_number.
+    decimal_number = position_three_decimal + position_two_decimal + position_one_decimal + position_zero_decimal
 
     ## This temporary variable helps us write the print statement in a more compact form.
     binary_number = position_three_bit + position_two_bit + position_one_bit + position_zero_bit
