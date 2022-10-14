@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page Title Goes Here</title>
+    <meta charset="utf-8">
+    <style>
+
+        * { box-sizing: border-box; margin: 0; }
+
+        header 
+        { 
+            background-color: #87CEEB; 
+/*
+            grid-area: h;
+*/
+        }
+        nav 
+        { 
+            background-color: #20B2AA; 
+/*
+            grid-area: n;
+*/
+        }
+        main 
+        { 
+            background-color: #FFB6C1; 
+            height: 250px;
+/*
+            grid-area: m;
+*/
+        }
+        footer 
+        { 
+            background-color: #F08080; 
+/*
+            grid-area: f;
+*/
+        }
+
+        /* Center the children of the wrapper horizontally and vertically using flex */
+        /* The > is the "child combinator" selector - it matches only immediate children. */
+        #wrapper > *
+        { 
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #wrapper 
+        { 
+            background-color: #CCCCCC;
+            margin: 10px 20px;
+            display: grid;
+            grid-template-columns: 150px auto; 
+            grid-template-rows: 100px auto 50px;
+            /* Since we have a 3x2 grid, we define area names in the following format:" */
+/*
+            grid-template-areas: 
+                "h h"
+                "n m"
+                "f f"
+*/
+        }
+
+        #wrapper { gap: 10px; }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- HTML comments look like this. -->
+        <header>
+            <h2>header</h2>
+        </header>
+        <nav>
+            <h2>nav</h2>
+        </nav>
+        <main>
+            <h2>main</h2>
+        </main>
+        <footer>
+            <h2>footer</h2>
+        </footer>
+    </div>
+</body>
+</html>

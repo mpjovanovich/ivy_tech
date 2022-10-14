@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page Title Goes Here</title>
+    <meta charset="utf-8">
+    <style>
+
+        * { box-sizing: border-box; margin: 0; }
+
+        header 
+        { 
+            background-color: #87CEEB; 
+            height: 100px;
+        }
+        nav 
+        { 
+            background-color: #20B2AA; 
+            flex: 1;
+        }
+        main 
+        { 
+            background-color: #FFB6C1; 
+            height: 250px;
+            flex: 3;
+        }
+        footer 
+        { 
+            background-color: #F08080; 
+            height: 50px;
+        }
+
+        #wrapper 
+        { 
+            background-color: #CCCCCC;
+            margin: 10px 20px;
+        }
+
+        #flexbody
+        { 
+/*
+            display: flex;
+*/
+        }
+
+
+        /* Center the children of the wrapper horizontally and vertically using flex */
+        /* The > is the "child combinator" selector - it matches only immediate children. */
+/*
+        #wrapper > *
+        { 
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+*/
+
+        /* Add some margin / padding around items. */
+/*
+        #wrapper { padding: 5px; }
+        header, nav, main, footer { margin: 5px; }
+*/
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- HTML comments look like this. -->
+        <header>
+            <h2>header</h2>
+        </header>
+        <div id="flexbody">
+            <nav>
+                <h2>nav</h2>
+            </nav>
+            <main>
+                <h2>main</h2>
+            </main>
+        </div>
+        <footer>
+            <h2>footer</h2>
+        </footer>
+    </div>
+</body>
+</html>
