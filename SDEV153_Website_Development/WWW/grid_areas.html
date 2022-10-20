@@ -10,31 +10,23 @@
         header 
         { 
             background-color: #87CEEB; 
-/*
             grid-area: h;
-*/
         }
         nav 
         { 
             background-color: #20B2AA; 
-/*
             grid-area: n;
-*/
         }
         main 
         { 
             background-color: #FFB6C1; 
             height: 250px;
-/*
             grid-area: m;
-*/
         }
         footer 
         { 
             background-color: #F08080; 
-/*
             grid-area: f;
-*/
         }
 
         /* Center the children of the wrapper horizontally and vertically using flex */
@@ -53,13 +45,12 @@
             display: grid;
             grid-template-columns: 150px auto; 
             grid-template-rows: 100px auto 50px;
+
             /* Since we have a 3x2 grid, we define area names in the following format:" */
-/*
             grid-template-areas: 
                 "h h"
                 "n m"
                 "f f"
-*/
         }
 
         #wrapper { gap: 10px; }

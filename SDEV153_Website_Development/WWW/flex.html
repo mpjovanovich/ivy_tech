@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <style>
 
+        /* Here's a set of rules for setting colors... */
         * { box-sizing: border-box; margin: 0; }
 
         header 
@@ -16,6 +17,7 @@
         { 
             background-color: #20B2AA; 
             flex: 1;
+            min-width: 175px;
         }
         main 
         { 
@@ -37,28 +39,23 @@
 
         #flexbody
         { 
-/*
             display: flex;
-*/
         }
 
 
         /* Center the children of the wrapper horizontally and vertically using flex */
         /* The > is the "child combinator" selector - it matches only immediate children. */
-/*
-        #wrapper > *
+        #wrapper *
         { 
             display:flex;
             justify-content: center;
             align-items: center;
         }
-*/
 
         /* Add some margin / padding around items. */
-/*
         #wrapper { padding: 5px; }
+
         header, nav, main, footer { margin: 5px; }
-*/
 
     </style>
 </head>
