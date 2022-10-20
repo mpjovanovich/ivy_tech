@@ -1,12 +1,9 @@
-URL not submitted - ch5
-Yurts page missing
-Not all HTML elements from wireframe included
-missing span on activities page
-mailto link in footer missing
-mailto link in footer configured incorrectly
-"wrapper" div missing 
-body styles incorrect
-h1 styles incorrect
-Styles are missing to pad content within the main element
-
-1) The site uses hierarchical organization - it's just very shallow. You can think of random as "unstructured" or "no organization".
+URL not submitted 
+Wireframe element missing: ...
+Style configured incorrectly: [element]; [styles]
+Incorrect page title: "Pacific Trails Resort :: Yurts"
+Link not configured or broken: ...
+Incorrect HTML element used: ...
+Requested content missing: ...
+Unrequested content provided: ...
+Page missing (5): ... 
