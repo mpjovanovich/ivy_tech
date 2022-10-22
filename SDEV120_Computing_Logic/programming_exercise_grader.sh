@@ -3,6 +3,7 @@
 ## TODO: 
 ## Add python shebang at top of file if neeeded: #!/usr/bin/env python3
 ## Add chmod +x myfile.py
+## Going to need to use expect program
 
 ## input_array=()
 ## read -p "Student files path: " student_files
@@ -28,6 +29,10 @@ cat <<END > tmp
 2
 END
 
-cat tmp | tee '/dev/stdout' ./$grade_program
+
+cat tmp | echo
+
+##cat tmp | tee /dev/tty | ./$grade_program
+##./$grade_program < tmp | tee /dev/tty
 
 
