@@ -1,9 +1,10 @@
 ## Author:  [Firstname Lastname]
 ## Date:    [Date]
-## This 'treasure hunt' program accepts an x and y coordinate from the user.
-## The inputs are validated to make sure they fall within the range (1,9).
-## It then paints a 9x9 grid, printing a capital 'X' on the coordinates
-## that the user provided.
+## This 'treasure hunt' program accepts a map size and an x and y 
+## coordinate from the user. The map size must be no larger than 9.
+## Coordinate provided by the user must fall within the map.
+## It then paints a grid of the map, printing a capital 'X' on the 
+## coordinates that the user provided.
 
 BORDER_DELIMITER = '-'
 SPACER = " "
