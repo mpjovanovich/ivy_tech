@@ -1,3 +1,7 @@
+## Prompt the user to enter a dividend and divisor integer (division result = 
+## dividend / divisor). Print all of the non-zero multiples of the divisor that 
+## are less than or equal to the dividend. Keep track of the number of multiples 
+## and print that value; this will be the whole portion the division.
 
 dividend = int( input( "Enter a dividend: " ) )
 divisor = int( input( "Enter a divisor: " ) )
