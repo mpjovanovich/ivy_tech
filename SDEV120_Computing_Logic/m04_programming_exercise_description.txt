@@ -15,8 +15,8 @@ Example program run:
 Enter the salesperson ID: 223
 Enter the salesperson name: Larry Jensenroylen
 Enter the number of bedrooms: 0
-____________________
+--------------------
 Salesperson = Larry Jensenroylen
 ID = 223
 Commission = $30.00
-____________________
+--------------------
