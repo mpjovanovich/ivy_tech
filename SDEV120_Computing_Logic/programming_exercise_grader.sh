@@ -83,10 +83,11 @@ do
         truncate -s-2 ${student_diff_file}
         echo "}" >> ${student_diff_file}
 
-        ##diff --width=100 --expand-tabs --strip-trailing-cr --side-by-side --suppress-common-lines  \
         diff --width=100 --expand-tabs --strip-trailing-cr --side-by-side \
             $solution_log_path$i $student_log_path$i >> $student_diff_file
-        echo "" >> $student_diff_file
     done
+
+    ## The extra line bothers me. Get rid of it.
+    truncate -s-1 $student_diff_file
 
 done
