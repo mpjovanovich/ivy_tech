@@ -29,15 +29,15 @@ def print_map( map_size, treasure_x, treasure_y ):
     print_top_border( map_size )
     print()
 
-    for y in range( 1, map_size + 1, 1 ):
+    for y in range( map_size, 0, -1 ):
         ## Print the y axis labels
         print( str(y) + SPACER, end = "" )
 
         for x in range( 1, map_size + 1, 1 ):
 
-            ## TODO: the line below should print either an empty spot on the map
-            ## or an X if it matches the user coordinates. Replace it with the correct logic.
-            print( "?" , end = "" )
+            ## TODO: the line below currently prints an empty spot on the map.
+            ## Print an X if this is the x coordinate.
+            print( " " , end = "" )
 
             print( SPACER, end = "" )
 
@@ -60,20 +60,32 @@ def map_size_is_valid( map_size ):
 ## This function returns false if the coordinate is outside the
 ## bounds of the map (1,map size).
 def coordinate_is_valid( coordinate, map_size ):
-    ## TODO: complete this function.
-    return True 
+    if coordinate < 1 or coordinate > map_size:
+        return False
+    else:
+        return True
 
 def main():
+    valid_map_size = False
     map_size = int( input( "Enter the size of the map in the range (1,9): " ) )
-    while not map_size_is_valid( map_size ): 
+    valid_map_size = map_size_is_valid( map_size )
+
+    while map_size_is_valid( map_size ) == False:
         print( "Invalid map size - must fall within range (1,9)." )
         map_size = int( input( "Enter the size of the map in the range (1,9): " ) )
+        valid_map_size = map_size_is_valid( map_size )
 
+    valid_coordinate = False
     treasure_x = int( input( "Enter the x coordinate for the treasure: " ) )
-    ## TODO: call coordinate_is_valid function to validate input until it's valid.
+    valid_coordinate = coordinate_is_valid( treasure_x, map_size )
 
+    ## TODO: validate the x coordinate until the user gets it right.
+
+    valid_coordinate = False
     treasure_y = int( input( "Enter the y coordinate for the treasure: " ) )
-    ## TODO: call coordinate_is_valid function to validate input until it's valid.
+    valid_coordinate = coordinate_is_valid( treasure_y, map_size )
+
+    ## TODO: validate the y coordinate until the user gets it right.
 
     print_map( map_size, treasure_x, treasure_y )
 
