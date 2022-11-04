@@ -39,7 +39,8 @@ h2 {
 input {
     font: 1em sans-serif;
     box-sizing: border-box;
-    border: 1px solid #999;
+	border: 1px solid #999;
+
 }
 
 input:focus{
