@@ -35,9 +35,11 @@ def print_map( map_size, treasure_x, treasure_y ):
 
         for x in range( 1, map_size + 1, 1 ):
 
-            ## TODO: the line below currently prints an empty spot on the map.
-            ## Print an X if this is the x coordinate.
-            print( " " , end = "" )
+            ## TODO: the line below currently prints a question mark on the map.
+            ## Replace this line with the following logic - 
+            ## Print an "X" if this matches the treasure coordinates entered by the user.
+            ## Otherwise print an empty space, " ".
+            print( "?" , end = "" )
 
             print( SPACER, end = "" )
 
