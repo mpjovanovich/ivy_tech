@@ -28,12 +28,6 @@ nav ul
     margin: 0px;
 }
 
-nav ul, nav li
-{
-    display: block;
-    width: 100%;
-}
-
 /* Class selectors */
 .dropbutton 
 {
@@ -49,7 +43,7 @@ nav ul, nav li
 
 .dropdown 
 {
-    width: 160px;
+    min-width: 160px;
 }
 
 .dropdown-content 
