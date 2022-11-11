@@ -17,6 +17,12 @@ details
     margin: 20px 0px;
 }
 
+/* tmp fix until I can fix images */
+img
+{
+    background-color: lightyellow;
+} 
+
 nav
 {
     margin: 20px 0px;
@@ -28,10 +34,13 @@ nav ul
     margin: 0px;
 }
 
-nav ul, nav li
+summary
 {
-    display: block;
-    width: 100%;
+    background-color: gray;
+    list-style-type: none;
+    font-weight: bold;
+    padding-left: 20px;
+    border-radius: 5px;
 }
 
 /* Class selectors */
@@ -49,12 +58,15 @@ nav ul, nav li
 
 .dropdown 
 {
+    position: relative;
     width: 160px;
 }
 
 .dropdown-content 
 {
+    display: none;
     z-index: 1;
+    position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -70,13 +82,18 @@ nav ul, nav li
 
 .dropdown-content a:hover { background-color: #f1f1f1 }
 
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+}
+
 .dropdown:hover .dropbutton 
 {
     background-color: #3e8e41;
 }
 
 /* ID selectors */
-#main_content
+#main_content, #gallery
 {
     padding-left: 40px;
 }
@@ -84,4 +101,5 @@ nav ul, nav li
 #wrapper
 {
     display: flex;
+    flex: 1 1 1;
 }
