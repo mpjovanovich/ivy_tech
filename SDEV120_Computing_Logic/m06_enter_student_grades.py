@@ -19,5 +19,5 @@ while student != 'done':
     student = input( 'Enter student name, or type "done": ' )
 
 for i in range( 0, len(student_names), 1 ):
-    print( student_names[i] + ": " + str(student_grades[i]) )
+    print( student_names[i] + ": " + str( student_grades[i] ) )
 
