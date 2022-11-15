@@ -26,6 +26,6 @@ while n < 1 or n > 10:
 
 ## Note: we have to add one to "i" in the print statement below
 ## because the array is zero indexed.
-for i in range( n ):
+for i in range( 0, n, 1 ):
     print( str( i + 1 ) + ": " + largest_cities[i] )
 
