@@ -8,7 +8,7 @@
 
 ## Get user input.
 string1 = input( 'Enter the first string: ' )
-string2 = input( 'Enter the first string: ' )
+string2 = input( 'Enter the second string: ' )
 
 ## We start by initializing a comparison variable. We will 
 ## assume that the strings are the same until we find that they're not.
