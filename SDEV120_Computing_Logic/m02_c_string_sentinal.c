@@ -30,29 +30,28 @@ int main( int arc, char *argv[] )
     while( 1 == 1 )
     {
 
-	// Prompt the user to enter some text
-	printf( "Put in some text: " );
+        // Prompt the user to enter some text
+        printf( "Put in some text: " );
 
-	// Store the results in variable 'user_input'.
-	scanf( "%254s", user_input );
+        // Store the results in variable 'user_input'.
+        scanf( "%254s", user_input );
 
-	if( strcmp(user_input,"quit" ) == 0 )
-	    return 0;
+        if( strcmp(user_input,"quit" ) == 0 )
+            return 0;
 
-	length = 0;
-	int char_index = 0;
+        length = 0;
+        int char_index = 0;
         char current_char = -1;
         while( current_char != '\0' )
         {
             length++;
             printf( "The current character is: [%c].\r\n", user_input[char_index] );
-	    current_char = user_input[char_index];
+            current_char = user_input[char_index];
             char_index++;
         }
 
-	printf( "The length of your string is:  %d characters.\r\n", length - 1 );
-	printf( "Type 'quit' to exit the program, or continue.\r\n" );
-	printf( "\r\n" );
+        printf( "The length of your string is:  %d characters.\r\n", length - 1 );
+        printf( "Type 'quit' to exit the program, or continue.\r\n" );
     }
 
     return 0;
