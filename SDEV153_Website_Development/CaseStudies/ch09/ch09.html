@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Forms Are Excellent</title>
+	<link href="ch09.css" rel="stylesheet">
+</head>
+<body>
+	<form>
+		<h1>Chapter 9 - Fun With Forms</h1>
+		<p>Required fields are followed by <span class="required">*</span></p>
+		<section>
+			<!-- Each of the HTML elements that are direct children of the "section" parent element will take up
+				one grid space by default. That's why we can get away with not specifying the grid-row and grid-column
+				CSS styles for them. -->
+			<h2 class="section_header">Enter Your Contact Information</h2>
+			
+			<fieldset>
+				<legend>Title</legend>
+				<ul>
+					<li>
+						<label for="title_1"><input type="radio" id="title_1" name="title" value="A">Ace</label>
+					</li>
+					<li>
+						<label for="title_2"><input type="radio" id="title_2" name="title" value="K" >King</label>
+					</li>
+					<li>
+						<label for="title_3"><input type="radio" id="title_3" name="title" value="Q">Queen</label>
+					</li>
+				</ul>
+			</fieldset>
+
+			<label for="name">
+				<span>Name: </span>
+				<span class="required">*</span>
+			</label>
+			<input type="text" id="name" name="name">
+			
+			<label for="pwd">
+				<span>Password: </span>
+				<span class="required">*</span>
+			</label>
+			<input type="text" id="pwd" name="pwd">
+			
+			<label for="nickname">
+				<span>Nickname: </span>
+			</label>
+			<input type="text" id="nickname" name="nickname">
+			
+			<label for="mail">
+				<span>E-mail: </span>
+			</label>
+			<input type="text" id="mail" name="mail">
+		</section>
+		
+		<section>
+			<h2 class="section_header">Enter Your Payment Information</h2>
+			
+			<input type="radio" id="card" name="card" value="visa"><label>Visa</label>
+			<input type="radio" id="card" name="card" value="mastercard"><label>Mastercard</label>
+			<input type="radio" id="card" name="card" value="american_express"><label>American Express</label>
+			
+			<label for="number">
+				<span>Card number:</span>
+				<span class="required">*</span>
+			</label>
+			<input type="tel" id="number" name="number">
+			
+			<label for="expiration">
+				<span>Expiration date:</span>
+				<span class="required">*</span>
+			</label>
+			<input type="text" id="expiration" name="expiration" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
+		</section>
+	</form>
+</body>
+</html>
