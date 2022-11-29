@@ -11,6 +11,8 @@ read -p "Number of program inputs: " num_program_inputs
 out_path=${student_file_path}/out
 tmp_path=${student_file_path}/tmp
 solution_log_path=${out_path}/solution_log
+
+## May fail, but who cares.
 rm -r $out_path
 mkdir $out_path
 rm -r $tmp_path
