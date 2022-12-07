@@ -12,10 +12,12 @@ Prompt to user to enter a column name, then print the distinct values for that c
 
 ## This demo file was taken from:
 ## https://www.kaggle.com/datasets/sudalairajkumar/daily-temperature-of-major-cities
-filename = "city_temperature.csv"
+filename = input( 'Enter the path to the CSV file: ' )
 
 ## Prompt the user for a column name.
-col_name = input('Enter a column name: ')
+## Convert it to lowercase so that we can ignore differences in case
+## when trying to find the column in the header row.
+col_name = input('Enter a column name: ' ).lower()
 
 ## Initialize an empty result set.
 result = []
@@ -24,7 +26,7 @@ result = []
 with open( filename, 'r' ) as f:
 	## Grab the first row and store in a string variable.
 	## The strip function gets rid of the \n character at the end of the line.
-    header_record = f.readline().strip()
+    header_record = f.readline().strip().lower()
 
 	## Split the fields by looking for a comma, and store them in an array.
     header_fields = header_record.split(',')
@@ -50,5 +52,8 @@ with open( filename, 'r' ) as f:
 		## Get the next row for processing. 
         data_record = f.readline()
 
-print( result )
+## Sort the array - just to make it readable.
+result.sort()
+for r in result:
+    print( r )
 
