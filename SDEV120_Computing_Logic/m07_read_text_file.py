@@ -29,7 +29,7 @@ with open( filename ) as f:
     line = f.readline()
 
     ## This line says "while the variable 'line' is not empty".
-    while line:
+    while line != '':
         print( "Line: " + repr(line) )
         line = f.readline()
 print()
@@ -44,7 +44,7 @@ with open( filename ) as f:
     c = f.read(1)
 
     ## This line says "while the variable 'c' is not empty".
-    while c:
+    while c != '':
         print( "Char: " + repr(c) )
         c = f.read(1)
 print()

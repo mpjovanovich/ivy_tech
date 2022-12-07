@@ -15,6 +15,7 @@ student = input( 'Enter student name: ' )
 
 ## We can't just do "student_names.remove( student ).
 ## That would leave the student's grade in the grades array.
+student_names.remove( student )
 
 if student in student_names:
     ## Get the index of the student name
