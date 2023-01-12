@@ -1,6 +1,7 @@
 remote_theme: pages-themes/modernist@v0.2.0
-plugins: jekyll-remote-theme
-title: Prof. Jovanovich's Ivy Material
-description: Software Engineer at Intel
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
+title: Mike Jovanovich - Ivy Tech
+description: A demo site for Ivy course material
 logo: https://static.tvtropes.org/pmwiki/pub/images/riding_the_bomb.jpg
 show_downloads: false
