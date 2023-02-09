@@ -19,17 +19,17 @@ END;
 /
 SET SERVEROUTPUT ON;
 DECLARE
-    l_cursor SYS_REFCURSOR;
+    c_names SYS_REFCURSOR;
     l_fullname PERSON.FULL_NAME%TYPE;
 BEGIN
-    FETCH_PERSON_BY_REGION_PRC( l_cursor );
+    FETCH_PERSON_BY_REGION_PRC( c_names );
             
     LOOP 
-        FETCH l_cursor
+        FETCH c_names
         INTO  l_fullname;
-        EXIT WHEN l_cursor%NOTFOUND;
+        EXIT WHEN c_names%NOTFOUND;
 
         DBMS_OUTPUT.PUT_LINE( l_fullname );
     END LOOP;
-    CLOSE l_cursor;
+    CLOSE c_names;
 END;
