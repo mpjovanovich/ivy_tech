@@ -1,11 +1,11 @@
-CREATE OR REPLACE FUNCTION get_games_ordinal_number( games_id in NUMBER )
+CREATE OR REPLACE FUNCTION GET_GAMES_ORDINAL_NUMBER_FUN( games_id in NUMBER )
 RETURN NUMBER
 IS 
-    games_season VARCHAR(128);
-    games_number NUMBER;
+    l_games_season VARCHAR(128);
+    l_games_number NUMBER;
 BEGIN 
     SELECT SEASON
-    INTO games_season
+    INTO l_games_season
     FROM GAMES
     WHERE ID = games_id;
 
@@ -13,9 +13,11 @@ BEGIN
     (
         SELECT ID, GAMES_YEAR, ROW_NUMBER() OVER(ORDER BY GAMES_YEAR) as ordinal
         FROM GAMES 
-        WHERE SEASON = games_season
+        WHERE SEASON = l_games_season
     )
-    SELECT ordinal INTO games_number FROM SEASON_GAMES WHERE ID = games_id;
+    SELECT ordinal INTO l_games_number FROM SEASON_GAMES WHERE ID = games_id;
 
-    RETURN( games_number ); 
+    RETURN( l_games_number ); 
 END;
+/
+SELECT GET_GAMES_ORDINAL_NUMBER_FUN( 12 ) AS GAMES_ORDINAL FROM DUAL;
