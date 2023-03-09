@@ -1,0 +1,8 @@
+(1) JSON: format difficult to read. Use a tabbed hierarchical structure so that people can quickly understand what they're looking at.
+(1) JSON: Element malformed - ...
+(2) JSON: Nested elements should use array notation - "producer": [ "producer1", "producer2" ]
+(2) JSON: No nested elements listed per requirements for producers and actors.
+(1) XML: Element malformed - ...
+(1) XML: Missing XML declaration at beginning of file.
+(2) XML: Nested elements should be within child tags: <producers><producer>...</producer>
+(2) XML: No nested elements listed per requirements for producers and actors.
