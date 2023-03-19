@@ -1,0 +1,61 @@
+
+Prompt the user to enter
+	employee name
+	position ("management" or "non-management"),
+	hours worked for the week
+
+Continue to prompt until the user types "done".
+
+Print a report on the data with three sections containing:
+	1) Name, hours worked, and weekly pay for each employee.
+	2) Employee count, aggregated into two categories - one figure for management and another for non-management.
+	3) Average hours worked, aggregated into two categories - one figure for management  and another for non-management.
+	
+The standard pay rate for management is $22/hr.
+The standard pay rate for floor non-management is $18/hr.
+Any hours worked exceeding 40 hours are at a modified pay rate of 1.5 times standard pay (overtime pays time and a half).
+
+________________________________________________________________________
+
+STYLE
+(5) No program description.
+(2) Program description does not contain sufficient detail.
+(2) Comments are sparse or uninformative.
+(2) Variable names are not self-describing.
+(1) Constants should be in all caps.
+(1) Parenthesis not needed on return statements.
+(1) Output for individual pay has inconsistent decimal rounding.
+(1) Output for dollar amounts should use a dollar sign.
+(1) Tone of the prompts is inconsistent with target audience (payroll application user). Should be formal.
+(1) Inconsistent spacing for method calls and control structures.
+
+OUTPUT
+(5) Program does not print report if no names are provided (empty input set).
+(2) Program allows invalid position to be entered.
+(2) No type checking for integer when entering hours worked.
+(2) Program allows negative hours to be entered.
+(2) Inconsistent or inappropriate use of casing or punctuation for report sections.
+(2) Output contains typos and/or grammatical errors.
+(5) Program does not calculate overtime pay.
+(5) The program was to prompt for total hours; not have a separate prompt for regular and overtime.
+(2) Unformatted print for name, hours worked, and weekly pay.
+(10) Program does not loop to allow for multiple record entries.
+(10) Program does not print weekly pay.
+(10) Program does not print position counts.
+(10) Program does not print position average hours.
+(10) Incorrect overtime pay calculation.
+
+
+________________________________________________________________________
+
+
+880
+1375
+630
+720
+990
+
+Avg hours mgmt:	47.5
+Avg hours nmgmt:	41.66666667
+
+____
