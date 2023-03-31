@@ -8,7 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include = "Encapsulation\EncapsulationDemo.csproj" />
+    <ProjectReference Include = "EncapsulationDemo\EncapsulationDemo.csproj" />
+	<ProjectReference Include = "InheritanceDemo\InheritanceDemo.csproj" />
   </ItemGroup>
 
 </Project>
