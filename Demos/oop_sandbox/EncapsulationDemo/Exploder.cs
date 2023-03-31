@@ -9,23 +9,24 @@ public class Exploder
     public int TimesExploded { get; set; }
 
     // PRIVATE PROPERTIES / FIELDS
-    private double CurrentFuseLength { get; set; };
+    private double CurrentFuseLength { get; set; }
 
     // PUBLIC METHODS
     public void Explode()
     {
         int elapsed_seconds = 0;
+        PrimeFuse();
         while( CurrentFuseLength > 0 )
         {
             Console.WriteLine( "Counter: " + elapsed_seconds + " seconds..." );
             Console.WriteLine( "Fuse left: " + CurrentFuseLength + "cm" );
-            ConsumeFuse( 1 )
+            ConsumeFuse( 1 );
             elapsed_seconds++;
         }
             
         Console.WriteLine( "Counter: RUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUN!!!" );
         Console.WriteLine( "..(*lackluster explosion*)..(*weak puff of smoke*)..." );
-        Console.WriteLine()
+        Console.WriteLine();
     }
 
     // PRIVATE METHODS

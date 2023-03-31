@@ -5,9 +5,11 @@ namespace InheritanceDemo;
 // to provide common functionality.
 
 // All of the "core" things that a deity can do are in here.
-public class PoliSciDeity( string name, Gender gender ) : Deity( name, Disposition.Evil, gender )
+public class PoliSciDeity : Deity
 {
-    public void Sing()
+    public PoliSciDeity( string name, Deity.DeityGender gender ) : base( name, Deity.DeityDisposition.Evil, gender ) { }
+
+    override public void Sing()
     {
         // Note that we're calling a protected method from the base class - we have access to any protected members from the base.
         Console.WriteLine( TranslateToCommonVoice( "I am the growth and decay of a people; I am the its lord and its thief." ) );
