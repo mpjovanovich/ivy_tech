@@ -19,6 +19,8 @@ static void DoEcapsulationDemo()
 
 static void DoPolymorphismStuff( Deity deity )
 {
+	// With polymorphism, we can sub in any deity, because we know all deities implement the methods below.
+	// In this case we are calling methods from the base class.
     Console.WriteLine( "Citizens are praying..." );
     deity.ReceivePrayer();
     Console.WriteLine();
@@ -40,7 +42,7 @@ static void DoInheritanceDemo()
     CompSciDeity turing_of_britannia = new CompSciDeity( "Alan", Deity.DeityGender.Masculine );
     DoPolymorphismStuff( turing_of_britannia );
 
-    // Only the CompSciDeity can write programs.
+    // Only the CompSciDeity can write programs, so it's the only deity with this method.
     turing_of_britannia.WriteProgram();
 
     PoliSciDeity emily_your_ex = new PoliSciDeity( "Emily", Deity.DeityGender.Feminine );
