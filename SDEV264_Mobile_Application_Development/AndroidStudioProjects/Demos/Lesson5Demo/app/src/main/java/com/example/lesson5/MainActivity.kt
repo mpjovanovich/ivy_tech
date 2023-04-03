@@ -5,6 +5,7 @@ import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import com.example.lesson5.databinding.ActivityMainBinding
 
 // TO SHOWCASE THIS LAB:
@@ -32,29 +33,27 @@ class MainActivity : AppCompatActivity() {
         *
         * This is because the actual process of making the views (controls) available to us as
         * properties on the "binding" variable doesn't take place until the "inflate" method is
-        * called on that varniable.
+        * called on that variable.
         */
 
         // binding.calculateButton.text = "bla"
 
         binding = ActivityMainBinding.inflate(layoutInflater)
-
         setContentView(binding.root)
 
         binding.testButton.setOnClickListener{ doClickStuff() }
     }
 
     private fun doClickStuff() {
-        // Note - we can set this as often as we want, but it won't change after we set it once.
-        binding.mockView1.setBackgroundColor(Color.parseColor("#999999"))
 
         // This is how we'd get the text to alternate.
-        if (binding.textView.text.toString() == "I am a new message...") {
-            binding.textView.text = "I am an old message..."
-        } else {
-            binding.textView.text = null
-            binding.textView.text = "I am a new message..."
-        }
+        val clickText = binding.timesClickedText.text.toString()
+
+        // Get the last digit. Doesn't work after 9, but we're going to ignore that for now.
+        val timeClicked = clickText[clickText.length-1].digitToInt() + 1
+
+        // Update the text in the textView
+        binding.timesClickedText.text = "Times clicked: ${timeClicked}"
 
         // This is how we toggle visibility of a group.
         if (binding.mockGroup.visibility == View.VISIBLE) {

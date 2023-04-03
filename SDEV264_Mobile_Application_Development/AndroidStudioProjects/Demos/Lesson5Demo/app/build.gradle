@@ -5,6 +5,10 @@ plugins {
 }
 
 android {
+    buildFeatures {
+        viewBinding = true
+    }
+
     namespace 'com.example.lesson5'
     compileSdk 33
 
@@ -17,9 +21,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    buildFeatures {
-        viewBinding = true
-    }
+
     buildTypes {
         release {
             minifyEnabled false
