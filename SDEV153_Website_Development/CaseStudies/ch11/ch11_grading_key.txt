@@ -1,0 +1,15 @@
+(1) Best practices: Images missing alt text.
+(1) CSS rule missing or incorrect: Summary element, does not extend to width of parent container.
+(1) CSS rule missing or incorrect: Summary element, padding.
+(1) CSS rule missing or incorrect: Summary element, bold text.
+(1) CSS rule missing or incorrect: Summary element, bg color.
+(1) CSS rule missing or incorrect: Summary element, rounded corners.
+(1) CSS rule missing or incorrect: Summary element, list-style-type.
+(1) CSS rule missing or incorrect: Summary element, not flush with corresponding details element.
+(1) CSS rule missing or incorrect: Images, need padding.
+(1) HTML element missing or incorrect: sparky movie clip missing.
+(1) HTML element missing or incorrect: sparky movie clip not functional.
+(3) HTML element missing or incorrect: flex container with images missing.
+(1) Interactivity missing or incorrect: nav items not linked to summary elements.
+(1) Interactivity missing or incorrect: top images change layout when clicking nav links
+(5) Interactivity missing or incorrect: Dropdown menu no longer works.

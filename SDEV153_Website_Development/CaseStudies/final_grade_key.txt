@@ -1,0 +1,43 @@
+Content
+(10) Page content is sparse.
+(5) Images file sizes should be < 100KB unless it's for a gallery. If so, there should be a small sized preview image with a link to the full-size image. Large images load very slowly on slow connections.
+(2) Incomplete sentences - punctuation missing from home page.
+(1) email links should use mailto.
+
+Design
+(5) Style is sparse, and looks similar to the default browser implementation for many elements.
+(1) Main navigation links should offer visual feedback on hover. This helps users quickly identify their function.
+(2) Navigation should not have bullet points, even if using a list. Bulleted items set a different expectation (not one of navigation) for the user.
+(1) Hero image should be centered.
+(2) There should be padding between the browser border and page content.
+(5) Bullets in nav overlap text when resizing window.
+(1) Lines/items need spaced further apart; difficult to read.
+(2) Difficult to read text; needs more foreground-background contrast.
+
+Mobile Friendly
+(5) Some elements scroll off to the right in small viewport.
+Missing CSS media queries for mobile styling.
+
+SEO best practice
+(2) Page titles not provided.
+(1) Page titles should be different throughout site.
+(2) Description meta element not provided.
+(2) Alt text for media should be accurate and descriptive.
+
+FORMS
+(2) Form inputs should have a corresponding label element.
+(2) No action attribute on form.
+(2) Forms that are submitted to server for processing should use method=post.
+(1) Use the  type=email attribute for email inputs. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email
+
+
+
+Nice mailto link.
+Good use of visual hover cues on nav links.
+Good use of required attribute.
+
+TODO:
+
+Force required fields in form.
+Better split for CSS and design rubric sections.
+Remove table requirement.

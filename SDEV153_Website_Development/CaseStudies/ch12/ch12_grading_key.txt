@@ -1,0 +1,6 @@
+(1) Best practices: Images missing alt text.
+(1) CSS rule missing or incorrect: Button hover, bg color.
+(1) CSS rule missing or incorrect: Button hover, pointer/cursor.
+(1) Colors for active button do not match the background color for the active div.
+(1) HTML element missing or incorrect: food2.jpg.
+(1) HTML element missing or incorrect: food3.png.
