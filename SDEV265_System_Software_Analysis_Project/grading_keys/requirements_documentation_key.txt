@@ -1,0 +1,19 @@
+GitHub Project
+
+(1) Miscategorized scenario element. ... e.g. action is in postcondition.
+
+(1 pt per, four total) New user stories do not follow format specified in the requirements and reviewed in class: "As a ___ I want to ___ so that ___". 
+
+(3 pt per, four required) Items missing scenarios in the description.
+
+(1) Sprint end date used instead of start date.
+
+
+Impact Matrix
+
+(2) Issue(s) do not align with priorities listed in GitHub project.
+
+
+Other
+
+(1) File not in requested format
