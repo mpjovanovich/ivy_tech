@@ -30,7 +30,7 @@ namespace coding_best_practice_sandbox
 
 			Console.Write( "Enter the second number: " );
 			string? input2 = Console.ReadLine();
-			long num2 = Convert.ToInt64( Console.ReadLine() );
+			long num2 = Convert.ToInt64( input2 );
 
 			Console.WriteLine( $"The result is: {num1 + num2}." );
 		}
