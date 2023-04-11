@@ -1,0 +1,31 @@
+ANDROID STUDIO SUBMISSION TERMINAL COMMANDS:
+
+______________________________________________________________________________
+
+WINDOWS (Powershell)
+
+# START - paste from here to end into terminal and hit enter/return
+rm solution.zip
+rm -r solution
+mkdir solution
+cp app\src\main\java\com\example\*\*.kt .\solution
+cp app\src\main\java\com\example\*\data\* .\solution
+cp app\src\main\java\com\example\*\model\* .\solution
+cp app\src\main\res\values\strings.xml .\solution
+Compress-Archive -Path .\solution\* -DestinationPath .\solution.zip
+# END
+
+______________________________________________________________________________
+
+MAC / Linux
+
+# START - paste from here to end into terminal and hit enter/return
+rm solution.zip
+rm -r solution
+mkdir solution
+cp app/src/main/java/com/example/*/*.kt ./solution
+cp app/src/main/java/com/example/*/data/* ./solution
+cp app/src/main/java/com/example/*/model/* ./solution
+cp app/src/main/res/values/strings.xml ./solution
+zip -j solution.zip ./solution/*
+# END
