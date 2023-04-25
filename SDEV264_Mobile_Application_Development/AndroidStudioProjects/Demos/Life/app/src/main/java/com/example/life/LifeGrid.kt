@@ -2,7 +2,7 @@ package com.example.life
 
 import androidx.compose.runtime.MutableState
 
-class LifeGrid(val grid_size: Int) {
+class LifeGrid(val gridSize: Int) {
 
     var grid: Array<BooleanArray>
 
@@ -12,8 +12,8 @@ class LifeGrid(val grid_size: Int) {
 
     fun updateGrid() {
         var newGrid = createGrid()
-        for(r in 0 until grid_size){
-            for(c in 0 until grid_size){
+        for(r in 0 until gridSize){
+            for(c in 0 until gridSize){
                 newGrid[r][c] = evaluateLife(r,c)
             }
         }
@@ -22,12 +22,11 @@ class LifeGrid(val grid_size: Int) {
 
     private fun createGrid(): Array<BooleanArray> {
         var cellState = Array(
-            grid_size,
-            { BooleanArray(grid_size) { false } }
+            gridSize,
+            { BooleanArray(gridSize) { false } }
         )
         return cellState
     }
-
 
     private fun evaluateLife(row: Int, col: Int): Boolean {
         var isAlive = grid[row][col]
@@ -40,9 +39,9 @@ class LifeGrid(val grid_size: Int) {
         val right = col+1
 
         val hasAbove = above >= 0
-        val hasBelow = below < grid_size
+        val hasBelow = below < gridSize
         val hasLeft = left >= 0
-        val hasRight = right < grid_size
+        val hasRight = right < gridSize
 
         // Above, above left, above right
         if( hasAbove && grid[above][col] ) livingNeighborCount++
@@ -67,8 +66,4 @@ class LifeGrid(val grid_size: Int) {
 
         return isAlive
     }
-
-//    operator fun get(colIndex: Int): Any {
-//
-//    }
 }
