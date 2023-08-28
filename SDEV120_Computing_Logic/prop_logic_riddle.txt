@@ -1,0 +1,46 @@
+
+https://brilliant.org/problems/the-boxes
+
+There is a car in only one of the boxes. We can state that as:
+
+A = car is in Box1
+B = car is in Box2
+C = car is in Box3
+
+A IFF !B AND !C
+B IFF !A AND !C
+C IFF !A AND !B
+
+(IFF means contrapositives are true too - if !B AND !C then A.)
+
+Given the following statements from the boxes..
+Box1 = A
+Box2 = !B
+Box3 = !A
+
+One box is telling the truth, and the other two are lying, therefore only one of the following scenarios is valid:
+
+Hypothesis1: Box1 AND !Box2 AND !Box3
+Hypothesis2: Box2 AND !Box1 AND !Box3
+Hypothesis3: Box3 AND !Box1 AND !Box2
+
+A hypothesis is invalid if it reaches the state : If [True] then [False]. 
+
+SOLUTION
+______________________________
+
+Hypothesis1 = Box1 AND !Box2 AND !Box3: 
+A AND B AND A
+A AND B = False because of "A IFF !B AND !C", therefore Hypothesis1 is not satisfiable.
+Therefore Hypothesis1 is invalid - we cannot use those statements.
+
+Hypothesis2 = Box2 AND !Box1 AND !Box3: 
+!B AND !A AND A
+!A AND A is a contradiction, therefore Hypothesis1 is not satisfiable.
+Therefore Hypothesis2 is invalid - we cannot use those statements.
+
+We now know Hypothesis3 must be valid, but let's check anyway:
+
+Hypothesis3 = Box3 AND !Box1 AND !Box2: 
+!A AND !A AND B
+There are no contradictions, so we can use the statements to figure out which box has the car!
