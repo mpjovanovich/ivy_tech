@@ -20,27 +20,30 @@ Box3 = !A
 
 One box is telling the truth, and the other two are lying, therefore only one of the following scenarios is valid:
 
-Hypothesis1: Box1 AND !Box2 AND !Box3
-Hypothesis2: Box2 AND !Box1 AND !Box3
-Hypothesis3: Box3 AND !Box1 AND !Box2
+Hypothesis1 = If Box1 Then !Box2 AND !Box3
+Hypothesis2 = If Box2 Then !Box1 AND !Box3
+Hypothesis3 = If Box3 Then !Box1 AND !Box2
 
-A hypothesis is invalid if it reaches the state : If [True] then [False]. 
+(We could technically expand these expressions...)
+Hypothesis1 IFF !Hypothesis2 AND !Hypothesis3
+Hypothesis2 IFF !Hypothesis1 AND !Hypothesis3
+Hypothesis3 IFF !Hypothesis1 AND !Hypothesis2
+
+A hypothesis is invalid (False) if it reaches the state : If [True] then [False]. 
 
 SOLUTION
 ______________________________
 
-Hypothesis1 = Box1 AND !Box2 AND !Box3: 
-A AND B AND A
-A AND B = False because of "A IFF !B AND !C", therefore Hypothesis1 is not satisfiable.
-Therefore Hypothesis1 is invalid - we cannot use those statements.
+Hypothesis1 = If Box1 Then !Box2 AND !Box3: 
+If A Then B AND A
+B AND A is a contradiction because "A IFF !B AND !C", therefore Hypothesis1 is invalid - we cannot assume that it contains any true statements.
 
-Hypothesis2 = Box2 AND !Box1 AND !Box3: 
-!B AND !A AND A
-!A AND A is a contradiction, therefore Hypothesis1 is not satisfiable.
-Therefore Hypothesis2 is invalid - we cannot use those statements.
+Hypothesis2 = If Box2 Then !Box1 AND !Box3: 
+If !B Then !A AND A
+!A AND A is a contradiction, therefore Hypothesis2 is invalid - we cannot assume that it contains any true statements.
 
-We now know Hypothesis3 must be valid, but let's check anyway:
+Because Hypothesis3 IFF !Hypothesis1 AND !Hypothesis2 we now know Hypothesis3 must be valid, but let's check anyway:
 
-Hypothesis3 = Box3 AND !Box1 AND !Box2: 
-!A AND !A AND B
-There are no contradictions, so we can use the statements to figure out which box has the car!
+Hypothesis3 = If Box3 Then !Box1 AND !Box2: 
+If !A Then !A AND B
+There are no contradictions, so we can use the statements to figure out which box has the car! So - which box has it?
