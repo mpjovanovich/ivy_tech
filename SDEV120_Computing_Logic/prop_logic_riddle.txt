@@ -29,7 +29,7 @@ Hypothesis1 IFF !Hypothesis2 AND !Hypothesis3
 Hypothesis2 IFF !Hypothesis1 AND !Hypothesis3
 Hypothesis3 IFF !Hypothesis1 AND !Hypothesis2
 
-A hypothesis is invalid (False) if it reaches the state : If [True] then [False]. 
+A hypothesis is invalid (False) if it contains contradictory statements.
 
 SOLUTION
 ______________________________
