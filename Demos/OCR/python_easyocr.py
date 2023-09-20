@@ -6,6 +6,9 @@ import os
 # Example usage: python3 python_easyocr.py --image_directory '/mnt/c/Users/mpjov/Downloads/TestOcr' 
     # --target_string 'smart solutions' --confidence .25 --use_gpu 1
 
+# Note: it will print a nag message to stderr if you run with --use-gpu 0.
+# You can suppress by redirecting it when you call the script: 2> /dev/nul
+
 parser = argparse.ArgumentParser()
 parser.add_argument('--image_directory', type=str, required=True, 
     help='path to directory with images to search')
