@@ -3,11 +3,15 @@ import argparse
 import cv2
 import os
 
-# Example usage: python3 python_easyocr.py --image_directory '/mnt/c/Users/mpjov/Downloads/TestOcr' 
+# Example usage: python python_easyocr.py --image_directory '/somepath/images' 
     # --target_string 'smart solutions' --confidence .25 --use_gpu 1
 
 # Note: it will print a nag message to stderr if you run with --use-gpu 0.
-# You can suppress by redirecting it when you call the script: 2> /dev/nul
+# You can choose to redirect only stdin to a file, append: 1> results.txt,
+# or if on the console redired stderr to null, append: 2> /dev/null.
+
+# There is little to no validation in this script. Make sure the image directory
+# only contains images, or it will blow up with a vector error.
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--image_directory', type=str, required=True, 
@@ -25,12 +29,11 @@ target_strings = args['target_string'].split(' ')
 prob_threshold = args['confidence']
 use_gpu = args['use_gpu'] > 0
 
+# Debug statements:
 # print(search_directory,target_strings,prob_threshold,use_gpu)
 
-# for file in os.path.abspath(search_directory):
 for root, dirs, files in os.walk(os.path.abspath(search_directory)):
     for file in files:
-        # image = cv2.imread('/mnt/c/Users/mpjov/Downloads/test_ocr.jpg')
         image = cv2.imread(os.path.join(root, file))
         reader = Reader(['en'], gpu=True)
         results = reader.readtext(image)
