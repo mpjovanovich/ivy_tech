@@ -15,7 +15,7 @@ def logical_and_train():
     training_data = [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 1, 1)]
 
     # Number of training iterations
-    num_iterations = 100
+    num_iterations = 1000
 
     # Training loop
     for _ in range(num_iterations):

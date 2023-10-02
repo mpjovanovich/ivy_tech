@@ -22,7 +22,7 @@ def logical_and_train():
 
     # Set learning rate and number of training iterations
     learning_rate = 0.1
-    num_iterations = 10000
+    num_iterations = 1000
 
     # Training loop
     for iteration in range(num_iterations):
