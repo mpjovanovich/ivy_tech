@@ -11,21 +11,21 @@ def sigmoid(x):
 
 # Define the logical AND function with training and testing phases
 def logical_and_train():
-    # Define training data for logical AND
-    training_data = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
-    target = np.array([0, 0, 0, 1])
+    # Set the training constants
+    LEARNING_RATE = 0.1
+    NUM_ITERATIONS = 1000
 
-    # Initialize weights and bias
+    # Initialize weights and bias to random values
     num_features = 2
     weights = np.random.rand(num_features)
     bias = np.random.rand()
 
-    # Set learning rate and number of training iterations
-    learning_rate = 0.1
-    num_iterations = 1000
+    # Training data for logical AND
+    training_data = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
+    target = np.array([0, 0, 0, 1])
 
     # Training loop
-    for iteration in range(num_iterations):
+    for iteration in range(NUM_ITERATIONS):
         # Initialize gradients for weights and bias
         grad_weights = np.zeros(num_features)
         grad_bias = 0
@@ -40,8 +40,8 @@ def logical_and_train():
             error = target[i] - prediction
 
             # Update gradients
-            grad_weights += learning_rate * error * prediction * (1 - prediction) * training_data[i]
-            grad_bias += learning_rate * error * prediction * (1 - prediction)
+            grad_weights += LEARNING_RATE * error * prediction * (1 - prediction) * training_data[i]
+            grad_bias += LEARNING_RATE * error * prediction * (1 - prediction)
 
         # Update weights and bias after processing all examples
         weights += grad_weights

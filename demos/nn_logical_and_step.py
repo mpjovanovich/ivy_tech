@@ -3,22 +3,24 @@ A Simple Perceptron for Logical AND using the Step Function.
 This is the best model to run for initial understanding, as there isn't much 
 complexity,and we're not using any libraries.
 '''
+import random
+
 # Define the logical AND function with training and testing phases
 def logical_and_train():
-    # Define initial weights and bias
-    weight1 = 0.0
-    weight2 = 0.0
-    bias = 0.0
-    learning_rate = 0.1
+    # Set the training constants
+    NUM_ITERATIONS = 1000
+    LEARNING_RATE = 0.1
+
+    # Initialize weights and bias to random values
+    weight1 = random.random()
+    weight2 = random.random()
+    bias = random.random()
 
     # Training data for logical AND
     training_data = [(0, 0, 0), (0, 1, 0), (1, 0, 0), (1, 1, 1)]
 
-    # Number of training iterations
-    num_iterations = 1000
-
     # Training loop
-    for _ in range(num_iterations):
+    for _ in range(NUM_ITERATIONS):
         for x1, x2, target in training_data:
             # Calculate the weighted sum
             weighted_sum = x1 * weight1 + x2 * weight2 + bias
@@ -33,9 +35,9 @@ def logical_and_train():
             error = target - output
 
             # Update weights and bias using the perceptron learning rule
-            weight1 += learning_rate * error * x1
-            weight2 += learning_rate * error * x2
-            bias += learning_rate * error
+            weight1 += LEARNING_RATE * error * x1
+            weight2 += LEARNING_RATE * error * x2
+            bias += LEARNING_RATE * error
 
     # Return the trained weights and bias as a tuple
     return weight1, weight2, bias
