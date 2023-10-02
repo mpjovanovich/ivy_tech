@@ -8,8 +8,8 @@ import random
 # Define the logical AND function with training and testing phases
 def logical_and_train():
     # Set the training constants
-    NUM_ITERATIONS = 1000
     LEARNING_RATE = 0.1
+    NUM_ITERATIONS = 1000
 
     # Initialize weights and bias to random values
     weight1 = random.random()
