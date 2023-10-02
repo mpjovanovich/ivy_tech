@@ -39,7 +39,12 @@ def logical_and_train():
             # Calculate error
             error = target[i] - prediction
 
-            # Update gradients
+            # Update gradients per the chain rule:
+            # Given derivative of sigmoid: σ'(x) = σ(x) * (1 - σ(x))
+            # Roughly below: (LEARNING_RATE * error) * (σ'(x) * input)
+                # Take a fraction of the error (determined by learning rate)
+                # Multiply by the derivative of the sigmoid function
+                # Multiply by the input (training data)
             grad_weights += LEARNING_RATE * error * prediction * (1 - prediction) * training_data[i]
             grad_bias += LEARNING_RATE * error * prediction * (1 - prediction)
 
