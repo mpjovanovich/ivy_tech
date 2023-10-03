@@ -6,7 +6,7 @@ complexity,and we're not using any libraries.
 import random
 
 # Define the logical AND function with training and testing phases
-def logical_and_train():
+def train():
     # Set the training constants
     LEARNING_RATE = 0.1
     NUM_ITERATIONS = 1000
@@ -43,7 +43,7 @@ def logical_and_train():
     return weight1, weight2, bias
 
 # Define the logical AND function for testing
-def logical_and_test(x1, x2, weights):
+def test(x1, x2, weights):
     weight1, weight2, bias = weights
 
     # Calculate the weighted sum
@@ -56,10 +56,10 @@ def logical_and_test(x1, x2, weights):
         return 0  # False
 
 # Train the perceptron and get the trained weights and bias
-trained_weights = logical_and_train()
+trained_weights = train()
 
 # Test the perceptron with different inputs
-print("AND(0, 0) =", logical_and_test(0, 0, trained_weights))  # Should output 0
-print("AND(0, 1) =", logical_and_test(0, 1, trained_weights))  # Should output 0
-print("AND(1, 0) =", logical_and_test(1, 0, trained_weights))  # Should output 0
-print("AND(1, 1) =", logical_and_test(1, 1, trained_weights))  # Should output 1
+print("AND(0, 0) =", test(0, 0, trained_weights))  # Should output 0
+print("AND(0, 1) =", test(0, 1, trained_weights))  # Should output 0
+print("AND(1, 0) =", test(1, 0, trained_weights))  # Should output 0
+print("AND(1, 1) =", test(1, 1, trained_weights))  # Should output 1
