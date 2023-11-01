@@ -6,14 +6,6 @@ SPEED = 5
 COLORS = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
 cur_color = -1
 
-# make screen object and
-# set screen mode to world
-sc = turtle.Screen()
-sc.mode('world')
-sc.setup(500, 500)
-
-turtle.setworldcoordinates(-50, -450, 450, 50)
-
 
 def change_color(t):
     global cur_color
@@ -35,6 +27,9 @@ def main():
     t = turtle.Turtle()
     t.width(LINE_WIDTH)
     t.speed(SPEED)
+    t.penup()
+    t.goto(-200,200)
+    t.pendown()
     draw_spiral(t, 50)
     turtle.done()
 
