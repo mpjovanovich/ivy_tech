@@ -3,7 +3,8 @@
 ## This program accepts a number of terms from the user and
 ## calculates the harmonic series up to that term.
 
-n = int(input( "Enter final term for series: " ))
+n_str = input( "Enter final term for series: " )
+n = int(n_str)
 
 ## Initialize the result
 result = 0.0

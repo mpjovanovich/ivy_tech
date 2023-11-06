@@ -57,5 +57,6 @@ plt.ylabel('Number of C-14 Atoms')
 plt.title('Carbon-14 Radioactive Decay Simulation')
 plt.legend()
 plt.grid(True)
-plt.show()
+plt.savefig('monte_carlo_output.png')
+#plt.show()
 

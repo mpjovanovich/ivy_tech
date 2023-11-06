@@ -4,10 +4,11 @@
 n = int( input( "Enter a power between 1 and 10: " ) )
 
 base = 1
-x = base**n
+x = 0
+# x = base**n
 
 while x <= 1000:
-    print( x )
+    print( base, x )
     base += 1
     x = base**n
     
