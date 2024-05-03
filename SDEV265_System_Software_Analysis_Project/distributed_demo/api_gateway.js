@@ -1,6 +1,8 @@
 /*
 This is the API Gateway service. It is responsible for receiving messages from clients and sending them to the calc services for processing. It uses a simple round-robin algorithm to distribute messages to the calc services.
 
+Make sure to npm install: express, axios, cors
+
 Example usage:
 node api_gateway.js 3000 API_GATEWAY 3001 3002
 
@@ -21,7 +23,9 @@ const calcServices = CALC_SERVICE_PORTS.map(
 // Create an express app
 const axios = require("axios");
 const express = require("express");
+const cors = require("cors");
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 app.post("/shuffle", async (req, res) => {

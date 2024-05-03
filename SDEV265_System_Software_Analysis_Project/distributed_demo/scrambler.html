@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scrambler</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Scrambler</h1>
+      <p>Enter a message to scramble:</p>
+      <input type="text" id="message" />
+      <button>Post Message</button>
+
+      <div id="messages">
+        <h2>Scrambled Messages</h2>
+        <ul id="scrambledMessages"></ul>
+      </div>
+    </div>
+
+    <script>
+      // Add event listener to button
+      document.querySelector("button").addEventListener("click", postMessage);
+      const messageElement = document.querySelector("#message");
+      const scrambledMessagesElement =
+        document.querySelector("#scrambledMessages");
+
+      // Function to post message to server
+      async function postMessage() {
+        const message = messageElement.value;
+
+        try {
+          const response = await fetch("http://localhost:3000/shuffle", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ message }),
+          });
+
+          const data = await response.json();
+
+          // Add scrambled message to list
+          scrambledMessagesElement.innerHTML += `<li><span class="service">${data.service}:</span> ${data.message}</li>`;
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      }
+    </script>
+  </body>
+</html>

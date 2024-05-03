@@ -1,6 +1,7 @@
 /*
 To test:
-node calc_service.js 3001 CALC_SERVICE_ALPHA_007
+node calc_service.js 3001 CALC_SERVICE_ALPHA
+node calc_service.js 3002 CALC_SERVICE_BRAVO
 */
 const express = require("express");
 
