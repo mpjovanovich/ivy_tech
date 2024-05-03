@@ -2,7 +2,85 @@
 <html>
   <head>
     <title>Scrambler</title>
-    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      h2 {
+        color: #333;
+        font-size: 1em;
+        text-align: center;
+        border-bottom: #333 1px solid;
+        padding-bottom: 20px;
+      }
+
+      p {
+        color: #666;
+        text-align: center;
+      }
+
+      input[type="text"] {
+        width: 100%;
+      }
+
+      input[type="text"],
+      button {
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      button {
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #444;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 20px auto;
+      }
+
+      ul li {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      #container {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      #messages {
+        margin-top: 40px;
+      }
+      .service {
+        display: inline-block;
+        width: 40%;
+        font-weight: bold;
+        font-size: 0.8em;
+      }
+    </style>
   </head>
   <body>
     <div id="container">
@@ -29,7 +107,11 @@
         const message = messageElement.value;
 
         try {
-          const response = await fetch("http://localhost:3000/shuffle", {
+          // Expose the API gateway URL
+          /* UPDATE ME FOR DEMO! */
+          const url = "https://ac45-168-91-1-19.ngrok-free.app/shuffle";
+
+          const response = await fetch(url, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
