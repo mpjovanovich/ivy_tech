@@ -24,9 +24,13 @@ const calcServices = CALC_SERVICE_PORTS.map(
 const axios = require("axios");
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+// Expose the public directory
+app.use(express.static(path.join(__dirname, "public")));
 
 app.post("/shuffle", async (req, res) => {
   const { message } = req.body;
