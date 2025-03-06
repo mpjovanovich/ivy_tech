@@ -1,6 +1,7 @@
 <!--
 Execute with: mvn clean package tomcat7:run
 Access with: http://localhost:[port-from-pom]/[path-from-pom]/index.jsp
+Stop in terminal with: Ctrl+c
 -->
 
 <!-- This directive tells the JSP engine that we are embedding Java code in the JSP page. 
